@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Jogos</h1>
+  <div class="cards">
+    <div class="card" onclick="irParaJogoExterno('link_do_jogo_animais')">
+      <h2>Animais</h2>
+      <p>Clique para jogar o jogo da memória de animais.</p>
+    </div>
+    <div class="card" onclick="irParaJogoExterno('link_do_jogo_numeros')">
+      <h2>Números</h2>
+      <p>Clique para jogar o jogo da memória de números.</p>
+    </div>
+    <div class="card" onclick="irParaJogoExterno('link_do_jogo_saudacoes')">
+      <h2>Saudações</h2>
+      <p>Clique para jogar o jogo da memória de saudações.</p>
+    </div>
+    <!-- Adicione aqui os próximos cards para outras categorias -->
+  </div>
+
+  <script>
+    function irParaJogoExterno(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
