@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida e Bebida</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flip-card.css">
+</head>
+<body>
+  <h1>Comida e Bebida</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Água</h2>
+        <p>Clique para ver informações sobre a água.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/agua.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Pão</h2>
+        <p>Clique para ver informações sobre o pão.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/pao.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Arroz</h2>
+        <p>Clique para ver informações sobre o arroz.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/arroz.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Maçã</h2>
+        <p>Clique para ver informações sobre a maçã.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/maca.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Banana</h2>
+        <p>Clique para ver informações sobre a banana.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/banana.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Tomate</h2>
+        <p>Clique para ver informações sobre o tomate.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/tomate.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Carne</h2>
+        <p>Clique para ver informações sobre a carne.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/carne.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Peixe</h2>
+        <p>Clique para ver informações sobre o peixe.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/peixe.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Café</h2>
+        <p>Clique para ver informações sobre o café.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/cafe.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Chá</h2>
+        <p>Clique para ver informações sobre o chá.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/cha.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>
