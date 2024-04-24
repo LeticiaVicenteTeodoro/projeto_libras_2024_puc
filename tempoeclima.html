@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo e Clima</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flip-card.css">
+</head>
+<body>
+  <h1>Tempo e Clima</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Sol</h2>
+        <p>Clique para ver informações sobre o sol.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/sol.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Chuva</h2>
+        <p>Clique para ver informações sobre a chuva.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/chuva.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Nuvens</h2>
+        <p>Clique para ver informações sobre as nuvens.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/nuvens.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Vento</h2>
+        <p>Clique para ver informações sobre o vento.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/vento.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Neve</h2>
+        <p>Clique para ver informações sobre a neve.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/neve.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Frio</h2>
+        <p>Clique para ver informações sobre o frio.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/frio.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Calor</h2>
+        <p>Clique para ver informações sobre o calor.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/calor.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Verão</h2>
+        <p>Clique para ver informações sobre o verão.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/verao.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Inverno</h2>
+        <p>Clique para ver informações sobre o inverno.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/inverno.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Primavera</h2>
+        <p>Clique para ver informações sobre a primavera.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/primavera.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>
