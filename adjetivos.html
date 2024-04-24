@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descrições Pessoais</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flip-card.css">
+</head>
+<body>
+  <h1>Descrições Pessoais</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Alto</h2>
+        <p>Clique para ver informações sobre alto.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/alto.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Baixo</h2>
+        <p>Clique para ver informações sobre baixo.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/baixo.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Bonito</h2>
+        <p>Clique para ver informações sobre bonito.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/bonito.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Feio</h2>
+        <p>Clique para ver informações sobre feio.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/feio.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Jovem</h2>
+        <p>Clique para ver informações sobre jovem.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/jovem.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Velho</h2>
+        <p>Clique para ver informações sobre velho.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/velho.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Magro</h2>
+        <p>Clique para ver informações sobre magro.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/magro.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Gordo</h2>
+        <p>Clique para ver informações sobre gordo.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/gordo.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Forte</h2>
+        <p>Clique para ver informações sobre forte.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/forte.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="front">
+        <h2>Fraco</h2>
+        <p>Clique para ver informações sobre fraco.</p>
+      </div>
+      <div class="back">
+        <iframe width="300" height="200" src="./videos/fraco.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>
