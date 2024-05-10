@@ -10,7 +10,6 @@
 
 <li><ul>Matheus - design da página inicial</ul>
 <ul>Gabriel - design da segunda página de acesso</ul>
-<ul>Daniely e Letícia - página de flashcards e página do jogo da memória sobre a linguagem (LIBRAS)</ul>
+<ul>Daniely e Letícia - página de flashcards sobre a linguagem (LIBRAS)</ul>
 <ul>Brenda e Giovani - página de vídeo aulas </ul> </li>
-
 
