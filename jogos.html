@@ -4,9 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogos</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .topo i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s;
+        width: 200px;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+
+    .card p {
+        margin: 0;
+    }
+
+    .card-ajuda {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        width: 300px;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-ajuda p {
+        margin: 0 0 10px;
+    }
+
+    .card-ajuda ol {
+        padding-left: 20px;
+    }
+
+    .card-ajuda ol li {
+        margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+  <div class="topo">
+    <i class="fas fa-arrow-left" id="voltar"></i>
+    <i class="fas fa-question-circle" id="ajuda"></i>
+  </div>
+
   <h1>Jogos</h1>
   <div class="cards">
     <div class="card" onclick="irParaJogoExterno('animais.html')">
@@ -47,7 +129,32 @@
     </div>
   </div>
 
+  <div class="card-ajuda" id="card-ajuda">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+        <li>Clique no card do tema que deseja jogar.</li>
+        <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+        <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+        <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+    </ol>
+    <p>O objetivo do jogo é acertar o máximo possível.</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
+
   <script>
+    document.getElementById('voltar').addEventListener('click', function() {
+        window.history.back();
+    });
+
+    document.getElementById('ajuda').addEventListener('click', function() {
+        var card = document.getElementById('card-ajuda');
+        if (card.style.display === 'none' || card.style.display === '') {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
     function irParaJogoExterno(url) {
       window.open(url, "_blank");
     }
