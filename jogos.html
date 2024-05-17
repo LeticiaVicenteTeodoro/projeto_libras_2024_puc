@@ -21,8 +21,19 @@
         padding: 10px 20px;
     }
 
+    .topo .left, .topo .right {
+        display: flex;
+        align-items: center;
+    }
+
     .topo i {
         font-size: 24px;
+        cursor: pointer;
+    }
+
+    .topo .right span {
+        margin-right: 10px;
+        font-size: 16px;
         cursor: pointer;
     }
 
@@ -85,8 +96,13 @@
 </head>
 <body>
   <div class="topo">
-    <i class="fas fa-arrow-left" id="voltar"></i>
-    <i class="fas fa-question-circle" id="ajuda"></i>
+    <div class="left">
+        <i class="fas fa-arrow-left" id="voltar"></i>
+    </div>
+    <div class="right">
+        <span id="ajuda-text">Como jogar</span>
+        <i class="fas fa-question-circle" id="ajuda-icon"></i>
+    </div>
   </div>
 
   <h1>Jogos</h1>
@@ -146,14 +162,17 @@
         window.history.back();
     });
 
-    document.getElementById('ajuda').addEventListener('click', function() {
+    function toggleCardAjuda() {
         var card = document.getElementById('card-ajuda');
         if (card.style.display === 'none' || card.style.display === '') {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }
-    });
+    }
+
+    document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
 
     function irParaJogoExterno(url) {
       window.open(url, "_blank");
