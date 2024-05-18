@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animais</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+    </div>
+    <div class="right">
+      <span id="ajuda-text">Como jogar</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+    </div>
+  </div>
+
+  <h1>Animais</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Cachorro</h2>
+          <p>Clique para ver informações sobre o cachorro.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/cachorro.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Gato</h2>
+          <p>Clique para ver informações sobre o gato.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/gato.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Pássaro</h2>
+          <p>Clique para ver informações sobre o pássaro.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/passaro.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Peixe</h2>
+          <p>Clique para ver informações sobre o peixe.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/peixe.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Leão</h2>
+          <p>Clique para ver informações sobre o leão.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/leao.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Elefante</h2>
+          <p>Clique para ver informações sobre o elefante.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/elefante.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Girafa</h2>
+          <p>Clique para ver informações sobre a girafa.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/girafa.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Macaco</h2>
+          <p>Clique para ver informações sobre o macaco.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/macaco.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Cobra</h2>
+          <p>Clique para ver informações sobre a cobra.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/cobra.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Cavalo</h2>
+          <p>Clique para ver informações sobre o cavalo.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/cavalo.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-ajuda" id="card-ajuda">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+        <li>Clique no card do tema que deseja jogar.</li>
+        <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+        <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+        <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+    </ol>
+    <p>O objetivo do jogo é acertar o máximo possível.</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
+
+  <script>
+    document.getElementById('voltar').addEventListener('click', function() {
+      window.history.back();
+    });
+
+    document.getElementById('ajuda-icon').addEventListener('click', function() {
+      const ajudaCard = document.getElementById('card-ajuda');
+      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
+    });
+
+    document.getElementById('ajuda-text').addEventListener('click', function() {
+      const ajudaCard = document.getElementById('card-ajuda');
+      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
+    });
+
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>

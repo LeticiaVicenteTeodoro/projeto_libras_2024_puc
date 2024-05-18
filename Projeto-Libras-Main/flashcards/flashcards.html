@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Flashcards</title>
+</head>
+
+<style>
+  .card {
+  width: 300px;
+  height: 300px;
+}
+</style>
+
+  <body>
+    <div class="topo">
+      <div class="left">
+        <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+      </div>
+      <div class="right">
+          <span id="ajuda-text">Como jogar</span>
+          <i class="fas fa-question-circle" id="ajuda-icon"></i>
+      </div>
+    </div>
+
+    <h1>Flashcards</h1>
+  
+    <div class="cards">
+      <div class="card" onclick="Acessar('animais.html')">
+        <h2>Animais</h2>
+        <p>Clique para jogar o jogo da memória de animais.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('adjetivos.html')">
+        <h2>Adjetivos</h2>
+        <p>Clique para jogar o jogo da memória de descrições pessoais.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('comidaebebida.html')">
+        <h2>Comida e Bebida</h2>
+        <p>Clique para jogar o jogo da memória de comida e bebida.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('cores.html')">
+        <h2>Cores</h2>
+        <p>Clique para jogar o jogo da memória de cores.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('familia.html')">
+        <h2>Família e Relações</h2>
+        <p>Clique para jogar o jogo da memória de família e relações.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('lugaresedirecoes.html')">
+        <h2>Lugares</h2>
+        <p>Clique para jogar o jogo da memória de lugares e direções.</p>
+      </div>
+    
+      <div class="card" onclick="Acessar('numeros.html')">
+        <h2>Números e Contagem</h2>
+        <p>Clique para jogar o jogo da memória de números e contagem.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('roupas.html')">
+        <h2>Roupas e Acessórios</h2>
+        <p>Clique para jogar o jogo da memória de roupas e acessórios.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('saudacoes.html')">
+        <h2>Saudações</h2>
+        <p>Clique para jogar o jogo da memória de saudações.</p>
+      </div>
+      
+      <div class="card" onclick="Acessar('tempoeclima.html')">
+        <h2>Tempo e clima</h2>
+        <p>Clique para jogar o jogo da memória de tempo e clima.</p>
+      </div>
+    </div>
+
+    <div class="card-ajuda" id="card-ajuda">
+      <p>É super fácil aprender a jogar! Siga as instruções:</p>
+      <ol>
+          <li>Clique no card do tema que deseja jogar.</li>
+          <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+          <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+          <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+      </ol>
+      <p>O objetivo do jogo é acertar o máximo possível.</p>
+      <p>Chame seus amigos e divirta-se!</p>
+    </div>
+
+
+
+
+    <script>
+      document.getElementById('voltar').addEventListener('click', function() {
+          window.history.back();
+      });
+
+      function toggleCardAjuda() {
+          var card = document.getElementById('card-ajuda');
+          if (card.style.display === 'none' || card.style.display === '') {
+              card.style.display = 'block';
+          } else {
+              card.style.display = 'none';
+          }
+      }
+
+      document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+      document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
+
+      function Acessar(url) {
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

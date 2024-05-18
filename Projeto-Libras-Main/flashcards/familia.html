@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Família e Relações</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+    </div>
+    <div class="right">
+      <span id="ajuda-text">Como jogar</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+    </div>
+  </div>
+
+  <h1>Família e Relações</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Pai</h2>
+          <p>Clique para ver informações sobre o pai.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/pai.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Mãe</h2>
+          <p>Clique para ver informações sobre a mãe.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/mae.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Irmão</h2>
+          <p>Clique para ver informações sobre o irmão.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/irmao.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Irmã</h2>
+          <p>Clique para ver informações sobre a irmã.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/irma.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Filho</h2>
+          <p>Clique para ver informações sobre o filho.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/filho.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Filha</h2>
+          <p>Clique para ver informações sobre a filha.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/filha.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Avô</h2>
+          <p>Clique para ver informações sobre o avô.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/avoh.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Avó</h2>
+          <p>Clique para ver informações sobre a avó.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/avo.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Tio</h2>
+          <p>Clique para ver informações sobre o tio.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/tio.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Tia</h2>
+          <p>Clique para ver informações sobre a tia.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/tia.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-ajuda" id="card-ajuda">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+        <li>Clique no card do tema que deseja jogar.</li>
+        <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+        <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+        <li>Após fazer a linguagem de sinais, clique no card para verificar se fez corretamente.</li>
+        <li>Para fechar o card, basta clicar novamente sobre ele.</li>
+    </ol>
+    <p>Boa sorte, ame seus amigos e divirta-se!</p>
+  </div>
+
+  <script>
+    document.getElementById('voltar').addEventListener('click', function() {
+      window.history.back();
+    });
+
+    document.getElementById('ajuda-icon').addEventListener('click', function() {
+      const ajudaCard = document.getElementById('card-ajuda');
+      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
+    });
+
+    document.getElementById('ajuda-text').addEventListener('click', function() {
+      const ajudaCard = document.getElementById('card-ajuda');
+      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
+    });
+
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>

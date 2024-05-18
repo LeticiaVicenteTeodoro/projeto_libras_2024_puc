@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lugares e Direções</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+    </div>
+    <div class="right">
+      <span id="ajuda-text">Como jogar</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+    </div>
+  </div>
+
+  <h1>Lugares e Direções</h1>
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Casa</h2>
+          <p>Clique para ver informações sobre casa.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/casa.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Escola</h2>
+          <p>Clique para ver informações sobre a escola.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/escola.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Rua</h2>
+          <p>Clique para ver informações sobre a rua.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/rua.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Praia</h2>
+          <p>Clique para ver informações sobre a praia.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/praia.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Parque</h2>
+          <p>Clique para ver informações sobre o parque.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/parque.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Mercado</h2>
+          <p>Clique para ver informações sobre o mercado.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/mercado.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Banco</h2>
+          <p>Clique para ver informações sobre o banco.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/banco.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Hospital</h2>
+          <p>Clique para ver informações sobre o hospital.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/hospital.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Restaurante</h2>
+          <p>Clique para ver informações sobre o restaurante.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/restaurante.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>Farmácia</h2>
+          <p>Clique para ver informações sobre a farmácia.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/farmacia.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+
+    const ajudaIcon = document.getElementById('ajuda-icon');
+    const ajudaText = document.getElementById('ajuda-text');
+    const cardAjuda = document.querySelector('.card-ajuda');
+
+    ajudaIcon.addEventListener('click', () => {
+      cardAjuda.classList.toggle('mostrar');
+    });
+
+    document.getElementById('voltar').addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
+
