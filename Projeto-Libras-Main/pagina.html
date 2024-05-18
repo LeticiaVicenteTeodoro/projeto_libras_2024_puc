@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardsPagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  h1 {
+    margin-top: 125px;
+  }
+
+</style>
+
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+    </div>
+    <div class="right">
+      <span id="info-text">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
+    </div>
+  </div>
+
+  <h1>Escolha por onde começar!</h1>
+  <div class="cardsPagina">
+    <div class="card" onclick="irParaVideoAulas()">
+      <h2>Vídeo Aulas</h2>
+      <p>Clique aqui para aprender.</p>
+    </div>
+    <div class="card" onclick="irParaFlashcards()">
+      <h2>Flashcards</h2>
+      <p>Clique aqui para testar o conteúdo estudado.</p>
+    </div>
+  </div>
+
+  <div class="card-info" id="card-info">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+      <li>Clique no card do tema que deseja jogar.</li>
+      <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+      <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+      <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+    </ol>
+    <p>O objetivo do jogo é acertar o máximo possível.</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
+
+  <script>
+    function irParaVideoAulas() {
+      window.location.href = "./video_aulas/video_aulas.html";
+    }
+
+    function irParaFlashcards() {
+      window.location.href = "./flashcards/flashcards.html";
+    }
+
+
+    // Adicione aqui a função para redirecionar para a terceira categoria
+  </script>
+</body>
+
+</html>
