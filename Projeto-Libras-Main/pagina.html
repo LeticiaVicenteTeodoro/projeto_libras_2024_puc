@@ -43,11 +43,11 @@
 
   <h1>Escolha por onde começar!</h1>
   <div class="cardsPagina">
-    <div class="card" onclick="irParaVideoAulas()">
+    <div class="card" onclick="Acessar('./video_aulas/video_aulas.html')">
       <h2>Vídeo Aulas</h2>
       <p>Clique aqui para aprender.</p>
     </div>
-    <div class="card" onclick="irParaFlashcards()">
+    <div class="card" onclick="Acessar('./flashcards/flashcards.html')">
       <h2>Flashcards</h2>
       <p>Clique aqui para testar o conteúdo estudado.</p>
     </div>
@@ -55,7 +55,8 @@
 
 
   <div class="card-ajuda" id="card-ajuda">
-    <p>Se você ja tem um certo conhecimento em Libras, recomendo que escolha "Flashcards" para testar seus conhecimentos!</p>
+    <p>Se você ja tem um certo conhecimento em Libras, recomendo que escolha "Flashcards" para testar seus
+      conhecimentos!</p>
     <p>Agora se você quer aprender do zero, relembrar ou aprender coisas novas, escolha "Video Aulas".</p>
   </div>
 
@@ -65,22 +66,11 @@
     </p>
     <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
       aprendizado da língua.</p>
-    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique e saiba mais</a></p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
   </div>
 
   <script>
-    document.getElementById('voltar').addEventListener('click', function () {
-      window.history.back();
-    });
-
-    function irParaVideoAulas() {
-      window.location.href = "./video_aulas/video_aulas.html";
-    }
-
-    function irParaFlashcards() {
-      window.location.href = "./flashcards/flashcards.html";
-    }
-
     function toggleCardAjuda() {
       var card = document.getElementById('card-ajuda');
       if (card.style.display === 'none' || card.style.display === '') {
@@ -106,7 +96,7 @@
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
     function Acessar(url) {
-        window.location.href = url;
+      window.location.href = url;
     }
   </script>
 </body>

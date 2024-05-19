@@ -19,7 +19,7 @@
 <body>
   <div class="topo">
     <div class="left">
-      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../pagina.html')"></i>
       <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
     </div>
     <div class="right">
@@ -94,10 +94,6 @@
 
 
   <script>
-    document.getElementById('voltar').addEventListener('click', function () {
-      window.history.back();
-    });
-
     function toggleCardAjuda() {
       var card = document.getElementById('card-ajuda');
       if (card.style.display === 'none' || card.style.display === '') {
