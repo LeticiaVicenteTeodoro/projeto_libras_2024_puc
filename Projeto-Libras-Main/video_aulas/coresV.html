@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Aulas</title>
+  <title>Cores</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -12,48 +12,28 @@
 <body>
   <div class="topo">
     <div class="left">
-      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../pagina.html')"></i>
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('video_aulas.html')"></i>
       <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
     </div>
     <div class="right">
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text">Sobre</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Escolha o que irá assistir!</h1>
+  <style>
+    iframe {
+      display: flex;
+      margin: auto;
+      padding: 100px
+    }
+    
+  </style>
 
-  <div class="cards">
-    <div class="videocard" onclick="Acessar('adjetivosV.html')">
-      <h2>Adjetivos</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('alimentosV.html')">
-      <h2>Alimentos</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('animaisV.html')">
-      <h2>Animais</h2>
-    </div>
-    <div class="videocard">
-      <h2>Em desenvolvimento...</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('coresV.html')">
-      <h2>Cores</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('familiaV.html')">
-      <h2>Família</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('lugaresV.html')">
-      <h2>Lugares</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('numerosV.html')">
-      <h2>Números</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('roupasV.html')">
-      <h2>Roupas</h2>
-    </div>
-    <div class="videocard" onclick="Acessar('saudacoesV.html')">
-      <h2>Saudações</h2>
-    </div>
+  <h1>Cores</h1>
+
+  <div>
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/gqoho8k2bwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <div class="card-info" id="card-info">

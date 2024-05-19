@@ -31,8 +31,8 @@
     <div class="left">
     </div>
     <div class="right">
-        <span id="info-text">Sobre</span>
-        <i class="fas fa-info-circle" id="info-icon"></i>
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
@@ -42,25 +42,34 @@
 
 
   <div class="card-info" id="card-info">
-    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais em LIBRAS (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.</p>
-    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o aprendizado da língua.</p>
-    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique aqui e saiba mais</a></p>
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique e saiba mais</a></p>
   </div>
 
   <script>
     function irParaPagina() {
       window.location.href = "pagina.html";
     }
+    
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
 
-    document.getElementById('info-icon').addEventListener('click', function() {
-        const infoCard = document.getElementById('card-info');
-        infoCard.style.display = infoCard.style.display === 'none' || infoCard.style.display === '' ? 'block' : 'none';
-      });
-  
-      document.getElementById('info-text').addEventListener('click', function() {
-        const infoCard = document.getElementById('card-info');
-        infoCard.style.display = infoCard.style.display === 'none' || infoCard.style.display === '' ? 'block' : 'none';
-      });
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+    function Acessar(url) {
+        window.location.href = url;
+    }
   </script>
 </body>
 </html>

@@ -10,11 +10,14 @@
 <body>
   <div class="topo">
     <div class="left">
-      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
     </div>
     <div class="right">
       <span id="ajuda-text">Como jogar</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
@@ -135,30 +138,57 @@
   <div class="card-ajuda" id="card-ajuda">
     <p>É super fácil aprender a jogar! Siga as instruções:</p>
     <ol>
-        <li>Clique no card do tema que deseja jogar.</li>
-        <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
-        <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
-        <li>Após fazer a linguagem de sinais, clique no card para verificar se fez corretamente.</li>
-        <li>Para fechar o card, basta clicar novamente sobre ele.</li>
+      <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+      <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
     </ol>
-    <p>Boa sorte, ame seus amigos e divirta-se!</p>
+    <p>O objetivo do jogo é treinar seus conhecimentos!</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
+
+  <div class="card-info" id="card-info">
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
   </div>
 
   <script>
-    document.getElementById('voltar').addEventListener('click', function() {
-      window.history.back();
-    });
+      document.getElementById('voltar').addEventListener('click', function() {
+          window.history.back();
+      });
 
-    document.getElementById('ajuda-icon').addEventListener('click', function() {
-      const ajudaCard = document.getElementById('card-ajuda');
-      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
-    });
+      function toggleCardAjuda() {
+      var card = document.getElementById('card-ajuda');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
 
-    document.getElementById('ajuda-text').addEventListener('click', function() {
-      const ajudaCard = document.getElementById('card-ajuda');
-      ajudaCard.style.display = ajudaCard.style.display === 'none' || ajudaCard.style.display === '' ? 'block' : 'none';
-    });
+    document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
 
+
+
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+      function Acessar(url) {
+        window.location.href = url;
+      }
     function flipCard(card) {
       card.classList.toggle('flipped');
     }

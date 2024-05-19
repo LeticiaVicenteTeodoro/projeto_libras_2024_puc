@@ -11,111 +11,123 @@
 
 <style>
   .card {
-  width: 300px;
-  height: 300px;
-}
+    width: 300px;
+    height: 300px;
+  }
 </style>
 
-  <body>
-    <div class="topo">
-      <div class="left">
-        <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
-      </div>
-      <div class="right">
-          <span id="ajuda-text">Como jogar</span>
-          <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      </div>
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
     </div>
-
-    <h1>Flashcards</h1>
-  
-    <div class="cards">
-      <div class="card" onclick="Acessar('animais.html')">
-        <h2>Animais</h2>
-        <p>Clique para jogar o jogo da memória de animais.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('adjetivos.html')">
-        <h2>Adjetivos</h2>
-        <p>Clique para jogar o jogo da memória de descrições pessoais.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('comidaebebida.html')">
-        <h2>Comida e Bebida</h2>
-        <p>Clique para jogar o jogo da memória de comida e bebida.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('cores.html')">
-        <h2>Cores</h2>
-        <p>Clique para jogar o jogo da memória de cores.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('familia.html')">
-        <h2>Família e Relações</h2>
-        <p>Clique para jogar o jogo da memória de família e relações.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('lugaresedirecoes.html')">
-        <h2>Lugares</h2>
-        <p>Clique para jogar o jogo da memória de lugares e direções.</p>
-      </div>
-    
-      <div class="card" onclick="Acessar('numeros.html')">
-        <h2>Números e Contagem</h2>
-        <p>Clique para jogar o jogo da memória de números e contagem.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('roupas.html')">
-        <h2>Roupas e Acessórios</h2>
-        <p>Clique para jogar o jogo da memória de roupas e acessórios.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('saudacoes.html')">
-        <h2>Saudações</h2>
-        <p>Clique para jogar o jogo da memória de saudações.</p>
-      </div>
-      
-      <div class="card" onclick="Acessar('tempoeclima.html')">
-        <h2>Tempo e clima</h2>
-        <p>Clique para jogar o jogo da memória de tempo e clima.</p>
-      </div>
+    <div class="right">
+      <span id="ajuda-text">Como jogar</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
+  </div>
 
-    <div class="card-ajuda" id="card-ajuda">
-      <p>É super fácil aprender a jogar! Siga as instruções:</p>
-      <ol>
-          <li>Clique no card do tema que deseja jogar.</li>
-          <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
-          <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
-          <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
-      </ol>
-      <p>O objetivo do jogo é acertar o máximo possível.</p>
-      <p>Chame seus amigos e divirta-se!</p>
+  <h1>Escolha um tema para jogar!</h1>
+
+  <div class="cards">
+    <div class="card" onclick="Acessar('adjetivos.html')">
+      <h2>Adjetivos</h2>
     </div>
+    <div class="card" onclick="Acessar('alimentos.html')">
+      <h2>Alimentos</h2>
+    </div>
+    <div class="card" onclick="Acessar('animais.html')">
+      <h2>Animais</h2>
+    </div>
+    <div class="card">
+      <h2>Em desenvolvimento...</h2>
+    </div>
+    <div class="card" onclick="Acessar('cores.html')">
+      <h2>Cores</h2>
+    </div>
+    <div class="card" onclick="Acessar('familia.html')">
+      <h2>Família</h2>
+    </div>
+    <div class="card" onclick="Acessar('lugares.html')">
+      <h2>Lugares</h2>
+    </div>
+    <div class="card" onclick="Acessar('numeros.html')">
+      <h2>Números</h2>
+    </div>
+    <div class="card" onclick="Acessar('roupas.html')">
+      <h2>Roupas</h2>
+    </div>
+    <div class="card" onclick="Acessar('saudacoes.html')">
+      <h2>Saudações</h2>
+    </div>
+  </div>
 
 
 
 
-    <script>
-      document.getElementById('voltar').addEventListener('click', function() {
-          window.history.back();
-      });
+  <div class="card-ajuda" id="card-ajuda">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+      <li>Clique no card do tema que deseja jogar.</li>
+      <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
+      <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+      <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+    </ol>
+    <p>O objetivo do jogo é treinar seus conhecimentos!</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
 
-      function toggleCardAjuda() {
-          var card = document.getElementById('card-ajuda');
-          if (card.style.display === 'none' || card.style.display === '') {
-              card.style.display = 'block';
-          } else {
-              card.style.display = 'none';
-          }
+  <div class="card-info" id="card-info">
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
+  </div>
+
+
+
+
+  <script>
+    document.getElementById('voltar').addEventListener('click', function () {
+      window.history.back();
+    });
+
+    function toggleCardAjuda() {
+      var card = document.getElementById('card-ajuda');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
       }
+    }
 
-      document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
-      document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
 
-      function Acessar(url) {
-        window.location.href = url;
+
+
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
       }
-    </script>
-  </body>
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+    function Acessar(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+
 </html>

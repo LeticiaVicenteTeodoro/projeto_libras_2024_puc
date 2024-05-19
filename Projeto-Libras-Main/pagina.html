@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -24,16 +25,18 @@
   h1 {
     margin-top: 125px;
   }
-
 </style>
 
 <body>
   <div class="topo">
     <div class="left">
-      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./jogos.html')"></i>
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./index.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
     </div>
     <div class="right">
-      <span id="info-text">Sobre</span>
+      <span id="ajuda-text">O que escolher</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
@@ -50,19 +53,26 @@
     </div>
   </div>
 
+
+  <div class="card-ajuda" id="card-ajuda">
+    <p>Se você ja tem um certo conhecimento em Libras, recomendo que escolha "Flashcards" para testar seus conhecimentos!</p>
+    <p>Agora se você quer aprender do zero, relembrar ou aprender coisas novas, escolha "Video Aulas".</p>
+  </div>
+
   <div class="card-info" id="card-info">
-    <p>É super fácil aprender a jogar! Siga as instruções:</p>
-    <ol>
-      <li>Clique no card do tema que deseja jogar.</li>
-      <li>Ao abrir, vão aparecer dez cards relacionados a esse tema, cada um com seu respectivo nome.</li>
-      <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
-      <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
-    </ol>
-    <p>O objetivo do jogo é acertar o máximo possível.</p>
-    <p>Chame seus amigos e divirta-se!</p>
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique e saiba mais</a></p>
   </div>
 
   <script>
+    document.getElementById('voltar').addEventListener('click', function () {
+      window.history.back();
+    });
+
     function irParaVideoAulas() {
       window.location.href = "./video_aulas/video_aulas.html";
     }
@@ -71,8 +81,33 @@
       window.location.href = "./flashcards/flashcards.html";
     }
 
+    function toggleCardAjuda() {
+      var card = document.getElementById('card-ajuda');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
 
-    // Adicione aqui a função para redirecionar para a terceira categoria
+    document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
+
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+    function Acessar(url) {
+        window.location.href = url;
+    }
   </script>
 </body>
 

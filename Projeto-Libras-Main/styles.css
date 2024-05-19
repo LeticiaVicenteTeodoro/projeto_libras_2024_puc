@@ -162,13 +162,17 @@ button {
   background-color: #e0e0e0;
 }
 
+.videocard:hover {
+  background-color: #e0e0e0;
+}
+
 @media screen and (max-width: 600px) {
   .cards {
     flex-direction: column;
     align-items: center;
   }
   .card {
-    width: calc(100% - 40px); /* Full width for smaller screens */
+    width: calc(100% - 40px);
   }
 }
 
