@@ -29,36 +29,36 @@
     }
 
     button {
-  font-family: 'Poetsen One', serif;
-  width: auto; /* Alterado para largura automática */
-  height: 80px; /* Reduzi a altura para se adaptar melhor a diferentes tamanhos de tela */
-  border: none;
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 40px; /* Reduzi o tamanho da fonte para melhor ajuste */
-  background-color: #e7309e;
-  color: #fff;
-  cursor: pointer;
-  position: fixed; /* Alterado para posição fixa */
-  bottom: 10%; /* Posicionado a 10% da parte inferior da tela */
-  right: 5%; /* Posicionado a 5% da borda direita da tela */
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* Ajustei o índice Z para garantir que o botão fique acima de outros elementos */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      font-family: 'Poetsen One', serif;
+      width: auto;
+      height: 80px;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 15px;
+      font-size: 60px;
+      background-color: #e7309e;
+      color: #fff;
+      cursor: pointer;
+      position: fixed;
+      bottom: 10%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-button:hover {
-  background-color: #ff50b9;
-}
+    button:hover {
+      background-color: #ff50b9;
+    }
 
     .botão-iniciar {
       display: none;
       opacity: 0;
     }
 
-  
+
     .video-background video {
       position: absolute;
       top: 50%;
@@ -142,20 +142,22 @@ button:hover {
     }
 
     .dropdown-item.dropdown-toggle::after {
-      content: '\f078'; /* FontAwesome icon for caret-down */
+      content: '\f078';
+      /* FontAwesome icon for caret-down */
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       position: absolute;
       right: 10px;
     }
 
-    .dropdown-item.show > .dropdown-submenu {
+    .dropdown-item.show>.dropdown-submenu {
       display: block;
     }
 
-      /* Estilização do ícone do dropdown */
-      .dropdown-item.dropdown-toggle::after {
-      content: '\f107'; /* FontAwesome icon for caret-down */
+    /* Estilização do ícone do dropdown */
+    .dropdown-item.dropdown-toggle::after {
+      content: '\f107';
+      /* FontAwesome icon for caret-down */
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       position: absolute;
@@ -163,7 +165,7 @@ button:hover {
     }
 
     /* Estilização do ícone do dropdown quando expandido */
-    .dropdown-item.show > .dropdown-submenu {
+    .dropdown-item.show>.dropdown-submenu {
       display: block;
     }
   </style>
@@ -188,14 +190,19 @@ button:hover {
   </div>
 
   <div class="dropdown-menu" id="dropdown-menu">
-    <div class="dropdown-item"><a href="./flashcards" style="color: white; text-decoration: none;">Flashcards</a></div>
-    <div class="dropdown-item"><a href="./video_aulas" style="color: white; text-decoration: none;">Video Aulas</a></div>
-    <div class="dropdown-item"><a href="./jogo_da_memoria" style="color: white; text-decoration: none;">Jogo da Memória</a></div>
+    <div class="dropdown-item"><a href="./flashcards/flashcards.html"
+        style="color: white; text-decoration: none;">Flashcards</a></div>
+    <div class="dropdown-item"><a href="./video_aulas/video_aulas.html"
+        style="color: white; text-decoration: none;">Video Aulas</a></div>
+    <div class="dropdown-item"><a href="./jogomemoria/jogo.html" style="color: white; text-decoration: none;">Jogo da
+        Memória</a></div>
     <div class="dropdown-item"><a href="./quiz" style="color: white; text-decoration: none;">Quiz</a></div>
     <div class="dropdown-item dropdown-toggle" id="aprenda-mais-toggle">Aprenda Mais
       <div class="dropdown-submenu">
-        <div class="dropdown-item"><a href="https://youtube.com/@librarianews?si=cneIL_2_8ijtBDdP" style="color: white; text-decoration: none;">Notícias em Libras</a></div>
-        <div class="dropdown-item"><a href="./aprenda_mais/historias_de_sucesso" style="color: white; text-decoration: none;">Histórias de Sucesso</a></div>
+        <div class="dropdown-item"><a href="https://youtube.com/@librarianews?si=cneIL_2_8ijtBDdP"
+            style="color: white; text-decoration: none;">Notícias em Libras</a></div>
+        <div class="dropdown-item"><a href="./aprenda_mais/historias_de_sucesso"
+            style="color: white; text-decoration: none;">Histórias de Sucesso</a></div>
       </div>
     </div>
   </div>
@@ -265,7 +272,7 @@ button:hover {
       }
     });
 
- 
+
   </script>
 </body>
 
