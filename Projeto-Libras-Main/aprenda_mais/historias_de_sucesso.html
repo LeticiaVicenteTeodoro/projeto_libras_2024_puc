@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórias de Sucesso</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+  <style>
+    /* Estilos para a seção de histórias de sucesso */
+    .historia {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .historia-item {
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .historia-texto {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .historia-item:nth-child(even) .historia-texto {
+      order: 2;
+    }
+
+    .historia-item:nth-child(odd) .historia-texto {
+      order: 1;
+    }
+
+    .historia-item img {
+      width: 50%;
+      border-radius: 5px;
+    }
+
+    /* Estilos para o botão de voltar */
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .topo .left,
+    .topo .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .topo i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .topo .right span {
+      margin-right: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../index.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+    </div>
+    <div class="right">
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
+    </div>
+  </div>
+  <div>
+    <h1>Historias de Sucesso</h1>
+
+    <div class="historia">
+      <div class="historia-item">
+        <div class="historia-texto">
+          <h2>Ludwig van Beethoven</h2>
+          <p>
+            Ludwig van Beethoven foi um compositor alemão. Mesmo enfrentando a surdez durante a maior parte de sua vida, ele continuou a criar algumas das obras musicais mais importantes e influentes da história.
+          </p>
+          <a href="https://pt.wikipedia.org/wiki/Ludwig_van_Beethoven" target="_blank">Saiba mais</a>
+        </div>
+        <img src="./imagens/bet.jpeg" alt="Beethoven">
+      </div>
+
+      <div class="historia-item">
+        <div class="historia-texto">
+          <h2>Nome da pessoa</h2>
+          <p>
+            Breve descrição da história de sucesso da pessoa.
+          </p>
+          <a href="#">Saiba mais</a>
+        </div>
+        <img src="imagem1.jpg" alt="Imagem da pessoa">
+      </div>
+
+      <div class="historia-item">
+        <div class="historia-texto">
+          <h2>Nome da pessoa</h2>
+          <p>
+            Breve descrição da história de sucesso da pessoa.
+          </p>
+          <a href="#">Saiba mais</a>
+        </div>
+        <img src="imagem2.jpg" alt="Imagem da pessoa">
+      </div>
+
+      <!-- Adicione mais histórias conforme necessário -->
+    </div>
+  </div>
+
+  <div class="card-info" id="card-info">
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
+  </div>
+<script>
+  function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+
+function Acessar(url) {
+  window.location.href = url;
+}</script>
+ 
+</body>
+
+</html>
