@@ -7,6 +7,7 @@
   <title>Aplicação Libras</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -28,34 +29,36 @@
     }
 
     button {
-      font-family: 'Poetsen One', serif;
-      width: 400px;
-      height: 120px;
-      border: none;
-      border-radius: 30px;
-      display: flex;
-      padding: 10px 20px;
-      font-size: 80px;
-      background-color: #e7309e;
-      color: #fff;
-      cursor: pointer;
-      position: absolute;
-      top: 700px;
-      left: 60%;
-      transform: translate(-50%, -50%);
-      align-items: center;
-      justify-content: center;
-    }
+  font-family: 'Poetsen One', serif;
+  width: auto; /* Alterado para largura automática */
+  height: 80px; /* Reduzi a altura para se adaptar melhor a diferentes tamanhos de tela */
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 40px; /* Reduzi o tamanho da fonte para melhor ajuste */
+  background-color: #e7309e;
+  color: #fff;
+  cursor: pointer;
+  position: fixed; /* Alterado para posição fixa */
+  bottom: 10%; /* Posicionado a 10% da parte inferior da tela */
+  right: 5%; /* Posicionado a 5% da borda direita da tela */
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ajustei o índice Z para garantir que o botão fique acima de outros elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #ff50b9;
+}
 
     .botão-iniciar {
       display: none;
       opacity: 0;
     }
 
-    button:hover {
-      background-color: #ff50b9;
-    }
-
+  
     .video-background video {
       position: absolute;
       top: 50%;
@@ -76,6 +79,93 @@
       max-width: 800px;
       margin: 0 20px;
     }
+
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #e7309e;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      background-color: #e7309e;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .dropdown-item:hover {
+      background-color: #ff50b9;
+    }
+
+    .dropdown-submenu {
+      display: none;
+      margin-left: 20px;
+    }
+
+    .dropdown-item.dropdown-toggle {
+      position: relative;
+    }
+
+    .dropdown-item.dropdown-toggle::after {
+      content: '\f078'; /* FontAwesome icon for caret-down */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 10px;
+    }
+
+    .dropdown-item.show > .dropdown-submenu {
+      display: block;
+    }
+
+      /* Estilização do ícone do dropdown */
+      .dropdown-item.dropdown-toggle::after {
+      content: '\f107'; /* FontAwesome icon for caret-down */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 10px;
+    }
+
+    /* Estilização do ícone do dropdown quando expandido */
+    .dropdown-item.show > .dropdown-submenu {
+      display: block;
+    }
   </style>
 </head>
 
@@ -88,15 +178,30 @@
   </div>
 
   <div class="topo">
-    <div class="left"></div>
+    <div class="left">
+      <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+    </div>
     <div class="right">
       <span id="info-text" style="margin-left: 10px;">Sobre</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
+  <div class="dropdown-menu" id="dropdown-menu">
+    <div class="dropdown-item"><a href="./flashcards" style="color: white; text-decoration: none;">Flashcards</a></div>
+    <div class="dropdown-item"><a href="./video_aulas" style="color: white; text-decoration: none;">Video Aulas</a></div>
+    <div class="dropdown-item"><a href="./jogo_da_memoria" style="color: white; text-decoration: none;">Jogo da Memória</a></div>
+    <div class="dropdown-item"><a href="./quiz" style="color: white; text-decoration: none;">Quiz</a></div>
+    <div class="dropdown-item dropdown-toggle" id="aprenda-mais-toggle">Aprenda Mais
+      <div class="dropdown-submenu">
+        <div class="dropdown-item"><a href="#" style="color: white; text-decoration: none;">Notícias em Libras</a></div>
+        <div class="dropdown-item"><a href="#" style="color: white; text-decoration: none;">Histórias de Sucesso</a></div>
+      </div>
+    </div>
+  </div>
   <div class="botão-iniciar" id="botao-iniciar">
-    <button onclick="irParaPagina()">Vamos lá</button>
+    <button style="bottom: 10%; right: 20%;" onclick="irParaPagina()">Vamos lá</button>
+
   </div>
 
   <div class="card-info" id="card-info">
@@ -109,6 +214,9 @@
         e saiba mais</a></p>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     function irParaPagina() {
       window.location.href = "pagina.html";
@@ -136,6 +244,28 @@
         video.pause();
       }, 4000);
     });
+
+    document.getElementById('menu-icon').addEventListener('click', function () {
+      var menu = document.getElementById('dropdown-menu');
+      menu.classList.toggle('show');
+    });
+
+    // Alteração do ícone do dropdown e ocultação dos subitens ao clicar
+    document.getElementById('aprenda-mais-toggle').addEventListener('click', function () {
+      this.classList.toggle('show');
+      var submenu = this.querySelector('.dropdown-submenu');
+      // Trocar o ícone ao clicar
+      var icon = this.querySelector('.dropdown-item.dropdown-toggle::after');
+      if (submenu.classList.contains('show')) {
+        icon.classList.remove('fa-caret-down');
+        icon.classList.add('fa-caret-right');
+      } else {
+        icon.classList.remove('fa-caret-right');
+        icon.classList.add('fa-caret-down');
+      }
+    });
+
+ 
   </script>
 </body>
 
