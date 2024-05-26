@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Escolha o quiz</title>
+</head>
+
+<style>
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+</style>
+
+<body>
+
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../pagina.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+    </div>
+    <div class="right">
+      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
+    </div>
+  </div>
+
+  <h1>Escolha um tema para jogar!</h1>
+
+  <div class="cards">
+   
+    <div class="card" onclick="Acessar('quiz_adjetivos.html')">
+      <h2>Adjetivos</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_alimentos.html')">
+      <h2>Alimentos</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_animais.html')">
+      <h2>Animais</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_tempoeclima.html')">
+        <h2>Tempo e Clima</h2>
+      </div>
+    <div class="card" onclick="Acessar('quiz_cores.html')">
+      <h2>Cores</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_familia.html')">
+      <h2>Família</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_lugares.html')">
+      <h2>Lugares</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_numeros.html')">
+      <h2>Números</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_roupas.html')">
+      <h2>Roupas</h2>
+    </div>
+    <div class="card" onclick="Acessar('quiz_saudacoes.html')">
+      <h2>Saudações</h2>
+    </div>
+  </div>
+
+  
+
+  <div class="card-info" id="card-info">
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
+  </div>
+
+  <script>
+   
+
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+    function Acessar(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+
+</html>
