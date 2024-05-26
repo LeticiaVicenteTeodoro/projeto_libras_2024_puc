@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim do Jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #score {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #chart_div {
+            margin-bottom: 20px;
+        }
+
+        #restart-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #restart-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <script type="text/javascript">
+           google.charts.load('current', {'packages':['corechart']});
+           google.charts.setOnLoadCallback(drawChart);
+   
+           function drawChart() {
+               const finalScore = localStorage.getItem('finalScore');
+               const totalQuestions = localStorage.getItem('totalQuestions');
+               const incorrectAnswers = totalQuestions - finalScore;
+   
+               const data = google.visualization.arrayToDataTable([
+                   ['Resposta', 'Quantidade'],
+                   ['Corretas', parseInt(finalScore)],
+                   ['Erradas', parseInt(incorrectAnswers)]
+               ]);
+   
+               const options = {
+                   title: 'Resultados do Quiz',
+                   pieHole: 0.4,
+               };
+   
+               const chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+               chart.draw(data, options);
+           }
+   
+           function restartGame() {
+               window.location.href = 'escolha_quiz.html';
+           }
+   
+           document.addEventListener('DOMContentLoaded', (event) => {
+               const finalScore = localStorage.getItem('finalScore');
+               const scoreElement = document.getElementById('score');
+               scoreElement.textContent = `Sua pontuação final é ${finalScore}`;
+           });
+       </script>
+   </head>
+   <body>
+       <div class="container">
+           <div id="score"></div>
+           <div id="chart_div" style="width: 100%; height: 400px;"></div>
+           <button id="restart-btn" onclick="restartGame()">Jogar Novamente</button>
+       </div>
+   </body>
+   </html>
+   
