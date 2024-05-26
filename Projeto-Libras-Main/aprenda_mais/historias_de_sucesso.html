@@ -7,7 +7,6 @@
   <title>Histórias de Sucesso</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
-</head>
   <style>
     /* Estilos para a seção de histórias de sucesso */
     .historia {
@@ -27,46 +26,74 @@
       padding: 20px;
     }
 
-    .historia-item:nth-child(even) .historia-texto {
-      order: 2;
-    }
-
-    .historia-item:nth-child(odd) .historia-texto {
-      order: 1;
-    }
-
     .historia-item img {
       width: 50%;
       border-radius: 5px;
     }
 
-    /* Estilos para o botão de voltar */
-    .topo {
+    /* Estilos para o card */
+    .card {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: white;
+    }
+
+    .card img {
+      width: 50%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+    }
+
+    .card-content p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
       padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    .topo .left,
-    .topo .right {
-      display: flex;
-      align-items: center;
+    .btn:hover {
+      background-color: #555;
     }
 
-    .topo i {
-      font-size: 24px;
-      cursor: pointer;
-    }
+    /* Estilos para telas de celular */
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+      }
 
-    .topo .right span {
-      margin-right: 10px;
-      font-size: 16px;
-      cursor: pointer;
+      .card img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .card-content {
+        width: 100%;
+        padding: 20px;
+      }
     }
   </style>
+</head>
 </head>
 
 <body>
@@ -84,40 +111,43 @@
     <h1>Historias de Sucesso</h1>
 
     <div class="historia">
-      <div class="historia-item">
-        <div class="historia-texto">
+  
+      <!-- Card Ludwig van Beethoven -->
+      <div class="card">
+        <img src="./imagem/bet.jpg" alt="Beethoven">
+        <div class="card-content">
           <h2>Ludwig van Beethoven</h2>
           <p>
             Ludwig van Beethoven foi um compositor alemão. Mesmo enfrentando a surdez durante a maior parte de sua vida, ele continuou a criar algumas das obras musicais mais importantes e influentes da história.
           </p>
-          <a href="https://pt.wikipedia.org/wiki/Ludwig_van_Beethoven" target="_blank">Saiba mais</a>
+          <a href="https://pt.wikipedia.org/wiki/Ludwig_van_Beethoven" class="btn" target="_blank">Saiba mais</a>
         </div>
-        <img src="./imagens/bet.jpeg" alt="Beethoven">
       </div>
+<!-- Card Thomas Edison -->
+<div class="card">
+  <img src="./imagem/tom.webp" alt="Thomas Edison">
+  <div class="card-content">
+    <h2>Thomas Edison</h2>
+    <p>Thomas Edison foi um inventor e empresário americano, considerado um dos maiores inventores da história. Ele é mais conhecido por ter inventado a lâmpada elétrica e por contribuir significativamente para o desenvolvimento do cinema.</p>
+    <a href="#" class="btn">Saiba mais</a>
+  </div>
+</div>
 
-      <div class="historia-item">
-        <div class="historia-texto">
-          <h2>Nome da pessoa</h2>
-          <p>
-            Breve descrição da história de sucesso da pessoa.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-        <img src="imagem1.jpg" alt="Imagem da pessoa">
-      </div>
+    
 
-      <div class="historia-item">
-        <div class="historia-texto">
-          <h2>Nome da pessoa</h2>
-          <p>
-            Breve descrição da história de sucesso da pessoa.
-          </p>
-          <a href="#">Saiba mais</a>
-        </div>
-        <img src="imagem2.jpg" alt="Imagem da pessoa">
-      </div>
+     
+   <!-- Card Laurent Clerc -->
+<div class="card">
+  <img src="./imagem/la.jfif" alt="Laurent Clerc">
+  <div class="card-content">
+    <h2>Laurent Clerc</h2>
+    <p>Laurent Clerc foi um educador surdo francês que desempenhou um papel fundamental na introdução da Língua de Sinais Americana (ou ASL, American Sign Language) nos Estados Unidos. Em 1817, juntamente com Thomas Hopkins Gallaudet, ele fundou a primeira escola para pessoas surdas nos Estados Unidos, conhecida como American School for the Deaf. A contribuição de Laurent na disseminação da Língua de Sinais Americana ajudou a fortalecer a identidade e a cultura surda no país.</p>
+    <a href="#" class="btn">Saiba mais</a>
+  </div>
+</div>
 
-      <!-- Adicione mais histórias conforme necessário -->
+
+
     </div>
   </div>
 
@@ -130,7 +160,18 @@
     <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
         e saiba mais</a></p>
   </div>
-<script>
+
+  <script>
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
   function toggleCardInfo() {
       var card = document.getElementById('card-info');
       if (card.style.display === 'none' || card.style.display === '') {
