@@ -25,15 +25,54 @@
     iframe {
       display: flex;
       margin: auto;
-      padding: 100px
+      padding: 20px;
+      max-width: 100%;
+      height: auto;
     }
-    
+
+    @media (max-width: 767px) {
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .card-info {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .topo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #e7309e;
+    }
+
+    .left, .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .left {
+      cursor: pointer;
+    }
+
+    .right {
+      cursor: pointer;
+    }
   </style>
 
   <h1>Adjetivos</h1>
 
   <div>
-      <iframe width="854" height="480" src="https://www.youtube.com/embed/j9SDYrA3XOg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/j9SDYrA3XOg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <div class="card-info" id="card-info">
@@ -59,7 +98,7 @@
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
     function Acessar(url) {
-        window.location.href = url;
+      window.location.href = url;
     }
   </script>
 </body>
