@@ -10,14 +10,22 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <style>
+    .card {
+        width: 170px;
+        height: 196px;
+        justify-content: center;
+        display: flex;
+    }
+
     .card-inner {
         position: relative;
-        width: 170px;
-        height: 250px;
         transition: transform 0.6s;
         transform-style: preserve-3d;
         align-items: center;
         justify-content: center;
+        font-size: 20px;
+        width: 170px;
+        height: 196px;
     }
 
     #pontuacao-container {
@@ -34,31 +42,44 @@
     }
 
     #pontos {
-      font-family: 'Poetsen One', serif;
-      font-size: 40px;
+        font-family: 'Poetsen One', serif;
+        font-size: 40px;
     }
-    
+
+    .cards {
+        justify-content: center;
+        display: flex;
+    }
+
+    .front {
+        display: flex;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .back {
+        display: flex;
+        text-align: center;
+        font-size: 20px;
+    }
 </style>
 
-<body>
+<body style="background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoJogoMemoria.jpg') ">
     <div class="topo">
         <div class="left">
             <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../pagina.html')"></i>
-            <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+            <span id="voltar-text" style="margin-left: 10px; font-size: 20px">VOLTAR</span>
         </div>
         <div class="right">
-            <span id="ajuda-text">Como jogar</span>
+            <span id="ajuda-text" style="font-size: 20px">COMO JOGAR</span>
             <i class="fas fa-question-circle" id="ajuda-icon"></i>
-            <span id="info-text" style="margin-left: 10px;">Sobre</span>
+            <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
             <i class="fas fa-info-circle" id="info-icon"></i>
         </div>
     </div>
 
-
-    <h1>Jogo da Memória</h1>
-
     <div id="pontuacao-container">
-        <span id="pontos">Pontos:</span>
+        <span id="pontos">PONTOS:</span>
         <span id="pontuacao">0</span>
     </div>
 
@@ -66,7 +87,7 @@
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Alto">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
                     <iframe width="109" height="200" src="../flashcards/videos/alto.mp4" frameborder="0"></iframe>
@@ -76,19 +97,17 @@
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Alto">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
-                    <p>Alto</p>
+                    <p>ALTO</p>
                 </div>
             </div>
         </div>
-
-
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Baixo">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
                     <iframe width="109" height="200" src="../flashcards/videos/baixo.mp4" frameborder="0"></iframe>
@@ -98,18 +117,17 @@
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Baixo">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
-                    <p>Baixo</p>
+                    <p>BAIXO</p>
                 </div>
             </div>
         </div>
-
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Bom_Dia">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
                     <iframe width="109" height="200" src="../flashcards/videos/bomDia.mp4" frameborder="0"></iframe>
@@ -119,18 +137,17 @@
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Bom_Dia">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
-                    <p>Bom Dia</p>
+                    <p>BOM DIA</p>
                 </div>
             </div>
         </div>
-
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Desculpe">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
                     <iframe width="109" height="200" src="../flashcards/videos/desculpe.mp4" frameborder="0"></iframe>
@@ -140,19 +157,18 @@
         <div class="card" onclick="flipCard(this)">
             <div class="card-inner">
                 <div class="front" data-name="Desculpe">
-                    <h2>?</h2>
+                    <div>?</div>
                 </div>
                 <div class="back">
-                    <p>Desculpe</p>
+                    <p>DESCULPE</p>
                 </div>
             </div>
         </div>
-
         <div class="cards">
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Com_Licença">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
                         <iframe width="109" height="200" src="../flashcards/videos/comLicenca.mp4"
@@ -163,19 +179,17 @@
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Com_Licença">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
-                        <p>Com Licença</p>
+                        <p>COM LICENÇA</p>
                     </div>
                 </div>
             </div>
-
-
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Adeus">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
                         <iframe width="109" height="200" src="../flashcards/videos/adeus.mp4" frameborder="0"></iframe>
@@ -185,18 +199,17 @@
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Adeus">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
-                        <p>Adeus</p>
+                        <p>ADEUS</p>
                     </div>
                 </div>
             </div>
-
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Mercado">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
                         <iframe width="109" height="200" src="../flashcards/videos/mercado.mp4"
@@ -207,18 +220,17 @@
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Mercado">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
-                        <p>Mercado</p>
+                        <p>MERCADO</p>
                     </div>
                 </div>
             </div>
-
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Boa_Noite">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
                         <iframe width="109" height="200" src="../flashcards/videos/boaNoite.mp4"
@@ -229,10 +241,10 @@
             <div class="card" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="front" data-name="Boa_Noite">
-                        <h2>?</h2>
+                        <div>?</div>
                     </div>
                     <div class="back">
-                        <p>Boa Noite</p>
+                        <p>BOA NOITE</p>
                     </div>
                 </div>
             </div>
@@ -262,16 +274,16 @@
                     e saiba mais</a></p>
         </div>
 
-         <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 
         <script>
             function toggleCardAjuda() {
@@ -310,48 +322,48 @@
 
             var cartasViradas = [];
 
-function flipCard(card) {
-    if (card.classList.contains('pontuado') || cartasViradas.length >= 2 || cartasViradas.includes(card)) {
-        return;
-    }
+            function flipCard(card) {
+                if (card.classList.contains('pontuado') || cartasViradas.length >= 2 || cartasViradas.includes(card)) {
+                    return;
+                }
 
-    card.classList.toggle('flipped');
-    cartasViradas.push(card);
+                card.classList.toggle('flipped');
+                cartasViradas.push(card);
 
-    if (cartasViradas.length === 2) {
-        var card1 = cartasViradas[0].querySelector('.front').dataset.name;
-        var card2 = cartasViradas[1].querySelector('.front').dataset.name;
+                if (cartasViradas.length === 2) {
+                    var card1 = cartasViradas[0].querySelector('.front').dataset.name;
+                    var card2 = cartasViradas[1].querySelector('.front').dataset.name;
 
-        if (card1 !== card2) {
-            setTimeout(function () {
-                cartasViradas.forEach(function (card) {
-                    card.classList.remove('flipped');
-                });
-                cartasViradas = [];
-            }, 1000);
-        } else {
-            pontos++;
-            document.getElementById('pontuacao').innerText = pontos;
-            cartasViradas.forEach(function (card) {
-                card.classList.add('pontuado');
-            });
-            var totalCards = document.querySelectorAll('.card').length;
-            var totalPontuados = document.querySelectorAll('.pontuado').length;
-            if (totalPontuados === totalCards) {
-                setTimeout(function () {
-                    document.querySelectorAll('.card').forEach(function (card) {
-                        card.classList.remove('flipped');
-                        card.classList.remove('pontuado');
-                    });
-                    document.getElementById('pontuacao').innerText = 0;
-                    pontos = 0;
-                    embaralharCards();
-                }, 2000);
+                    if (card1 !== card2) {
+                        setTimeout(function () {
+                            cartasViradas.forEach(function (card) {
+                                card.classList.remove('flipped');
+                            });
+                            cartasViradas = [];
+                        }, 1000);
+                    } else {
+                        pontos++;
+                        document.getElementById('pontuacao').innerText = pontos;
+                        cartasViradas.forEach(function (card) {
+                            card.classList.add('pontuado');
+                        });
+                        var totalCards = document.querySelectorAll('.card').length;
+                        var totalPontuados = document.querySelectorAll('.pontuado').length;
+                        if (totalPontuados === totalCards) {
+                            setTimeout(function () {
+                                document.querySelectorAll('.card').forEach(function (card) {
+                                    card.classList.remove('flipped');
+                                    card.classList.remove('pontuado');
+                                });
+                                document.getElementById('pontuacao').innerText = 0;
+                                pontos = 0;
+                                embaralharCards();
+                            }, 2000);
+                        }
+                        cartasViradas = [];
+                    }
+                }
             }
-            cartasViradas = [];
-        }
-    }
-}
 
             function embaralharCards() {
                 var posicoesOriginais = [];

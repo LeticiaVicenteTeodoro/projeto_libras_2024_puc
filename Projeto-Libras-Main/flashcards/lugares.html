@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lugares</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<style>
+  .topo {
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+}
+</style>
+<body style = "background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoLugares.jpg') ">
+  
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px" onclick="Acessar('./flashcards.html')">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="ajuda-text">Como jogar</span>
+      <span id="ajuda-text" style="margin-left: 10px; font-size: 20px">COMO JOGAR</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Lugares</h1>
   <div class="cards">
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Casa</h2>
-          <p>Clique para ver informações sobre casa.</p>
+          <h2>CASA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/casa.mp4" frameborder="0" allowfullscreen></iframe>
@@ -37,8 +44,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Escola</h2>
-          <p>Clique para ver informações sobre a escola.</p>
+          <h2>ESCOLA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/escola.mp4" frameborder="0" allowfullscreen></iframe>
@@ -48,8 +55,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Rua</h2>
-          <p>Clique para ver informações sobre a rua.</p>
+          <h2>RUA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/rua.mp4" frameborder="0" allowfullscreen></iframe>
@@ -59,8 +66,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Praia</h2>
-          <p>Clique para ver informações sobre a praia.</p>
+          <h2>PRAIA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/praia.mp4" frameborder="0" allowfullscreen></iframe>
@@ -70,8 +77,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Parque</h2>
-          <p>Clique para ver informações sobre o parque.</p>
+          <h2>PARQUE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/parque.mp4" frameborder="0" allowfullscreen></iframe>
@@ -81,8 +88,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Mercado</h2>
-          <p>Clique para ver informações sobre o mercado.</p>
+          <h2>MERCADO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/mercado.mp4" frameborder="0" allowfullscreen></iframe>
@@ -92,8 +99,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Banco</h2>
-          <p>Clique para ver informações sobre o banco.</p>
+          <h2>BANCO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/banco.mp4" frameborder="0" allowfullscreen></iframe>
@@ -103,8 +110,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Hospital</h2>
-          <p>Clique para ver informações sobre o hospital.</p>
+          <h2>HOSPITAL</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/hospital.mp4" frameborder="0" allowfullscreen></iframe>
@@ -114,8 +121,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Restaurante</h2>
-          <p>Clique para ver informações sobre o restaurante.</p>
+          <h2>RESTAURANTE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/restaurante.mp4" frameborder="0" allowfullscreen></iframe>
@@ -125,8 +132,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Farmácia</h2>
-          <p>Clique para ver informações sobre a farmácia.</p>
+          <h2>FARMÁCIA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/farmacia.mp4" frameborder="0" allowfullscreen></iframe>

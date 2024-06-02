@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Família</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<style>
+  .topo {
+  background-color: rgb(0, 153, 255);
+  color: rgb(255, 255, 255);
+}
+</style>
+<body style = "background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoFamilia.jpg') ">
+  
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px" onclick="Acessar('./flashcards.html')">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="ajuda-text">Como jogar</span>
+      <span id="ajuda-text" style="margin-left: 10px; font-size: 20px">COMO JOGAR</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Família</h1>
   <div class="cards">
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Pai</h2>
-          <p>Clique para ver informações sobre o pai.</p>
+          <h2>PAI</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/pai.mp4" frameborder="0" allowfullscreen></iframe>
@@ -37,8 +44,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Mãe</h2>
-          <p>Clique para ver informações sobre a mãe.</p>
+          <h2>MÃE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/mae.mp4" frameborder="0" allowfullscreen></iframe>
@@ -48,8 +55,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Irmão</h2>
-          <p>Clique para ver informações sobre o irmão.</p>
+          <h2>IRMÃO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/irmao.mp4" frameborder="0" allowfullscreen></iframe>
@@ -59,8 +66,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Irmã</h2>
-          <p>Clique para ver informações sobre a irmã.</p>
+          <h2>IRMÃ</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/irma.mp4" frameborder="0" allowfullscreen></iframe>
@@ -70,8 +77,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Filho</h2>
-          <p>Clique para ver informações sobre o filho.</p>
+          <h2>FILHO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/filho.mp4" frameborder="0" allowfullscreen></iframe>
@@ -81,8 +88,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Filha</h2>
-          <p>Clique para ver informações sobre a filha.</p>
+          <h2>FILHA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/filha.mp4" frameborder="0" allowfullscreen></iframe>
@@ -92,8 +99,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Avô</h2>
-          <p>Clique para ver informações sobre o avô.</p>
+          <h2>AVÔ</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/avoh.mp4" frameborder="0" allowfullscreen></iframe>
@@ -103,8 +110,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Avó</h2>
-          <p>Clique para ver informações sobre a avó.</p>
+          <h2>AVÓ</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/avo.mp4" frameborder="0" allowfullscreen></iframe>
@@ -114,8 +121,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Tio</h2>
-          <p>Clique para ver informações sobre o tio.</p>
+          <h2>TIO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/tio.mp4" frameborder="0" allowfullscreen></iframe>
@@ -125,8 +132,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Tia</h2>
-          <p>Clique para ver informações sobre a tia.</p>
+          <h2>TIA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/tia.mp4" frameborder="0" allowfullscreen></iframe>

@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
-    <title>Quiz - Comida e Bebida</title>
+    <title>Quiz - Alimentos</title>
     <style>
- .topo {
+        .topo {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            z-index: 999; /* Certifique-se de que o cabeçalho apareça acima de outros elementos */
+            background-color: rgb(231, 88, 45);
+            color: rgb(0, 0, 0);
         }
 
-         .card {
-    width: 300px;
-    height: 300px;
-  }
+        .card {
+            width: 300px;
+            height: 300px;
+        }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poetsen One', serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -49,21 +46,10 @@
         }
 
         .quiz-container {
-    margin: 10px 0; /* Reduz a margem superior e inferior */
-    height: 50%;
-}
-
-.options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0; /* Reduz a margem superior e inferior */
-    width: 25%;
-    margin: 0; /* Remove a margem para se aproximar da borda do card */
-}
-
-
-
+            margin: 10px 0;
+            /* Reduz a margem superior e inferior */
+            height: 50%;
+        }
 
         .options-container {
             display: flex;
@@ -71,34 +57,41 @@
             gap: 10px;
             margin: 20px 0;
             width: 35%;
-            margin: 0 auto; /* Centraliza o contêiner */
+            margin: 0 auto;
+            /* Centraliza o contêiner */
         }
 
         .option {
             padding: 10px 20px;
+            font-family: 'Poetsen One', serif;
             font-size: 16px;
             border: 1px solid #ccc;
-            background-color: #fff;
+            background-color: #f0f0f0;
             cursor: pointer;
             transition: background-color 0.3s ease, border-color 0.3s ease;
-            width: 100%; /* Ajusta a largura dos botões */
+            width: 100%;
+            /* Ajusta a largura dos botões */
         }
 
         .option:hover {
-            background-color: #f0f0f0;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(243, 255, 178, 0.938);
         }
 
         .correct {
-            background-color: #8bc34a; /* verde */
+            background-color: #8bc34a;
+            /* verde */
             border-color: #8bc34a;
         }
 
         .correct:hover {
-            background-color: #8bc34a; /* mantém verde ao passar o mouse */
+            background-color: #8bc34a;
+            /* mantém verde ao passar o mouse */
         }
 
         .incorrect {
-            background-color: #f44336; /* vermelho */
+            background-color: #f44336;
+            /* vermelho */
             border-color: #f44336;
         }
 
@@ -108,15 +101,19 @@
         }
 
         .video-container {
-    margin: 10px auto; /* Reduz a margem superior e inferior e centraliza horizontalmente */
-    width: 25%;
-    overflow: hidden; /* Esconde o conteúdo que estiver fora do container */
-}
+            margin: 10px auto;
+            /* Reduz a margem superior e inferior e centraliza horizontalmente */
+            width: 25%;
+            overflow: hidden;
+            /* Esconde o conteúdo que estiver fora do container */
+        }
 
-video {
-    width: 100%; /* Reduz o tamanho do vídeo */
-    border-top: 10px solid transparent; /* Cria uma borda superior transparente com 10px de altura */
-}
+        video {
+            width: 100%;
+            /* Reduz o tamanho do vídeo */
+            border-top: 10px solid transparent;
+            /* Cria uma borda superior transparente com 10px de altura */
+        }
 
 
         @media (max-width: 768px) {
@@ -128,30 +125,31 @@ video {
 
             .video-container,
             .options-container {
-                width: 100%; /* Garante que o vídeo e os botões não saiam da tela em dispositivos móveis */
+                width: 100%;
+                /* Garante que o vídeo e os botões não saiam da tela em dispositivos móveis */
             }
         }
     </style>
 </head>
-<body>
+
+<body style="background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoAlimentos.jpg') ">
     <div class="topo">
         <div class="left">
             <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('escolha_quiz.html')"></i>
-
-          <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+            <span id="voltar-text" style="margin-left: 10px; font-size: 20px">VOLTAR</span>
         </div>
         <div class="right">
-          <span id="info-text" style="margin-left: 10px;">Sobre</span>
-          <i class="fas fa-info-circle" id="info-icon"></i>
+            <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
+            <i class="fas fa-info-circle" id="info-icon"></i>
         </div>
-      </div>
+    </div>
 
     <div class="container">
-        <div id="score">Pontuação: 0</div>
+        <div id="score">PONTOS: 0</div>
 
         <div class="quiz-container">
             <div class="video-container">
-                <video id="question-video" controls>
+                <video id="question-video" controls autoplay muted>
                     <source id="video-source" src="" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
@@ -166,25 +164,30 @@ video {
     </div>
 
     <div class="card-info" id="card-info">
-        <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
-          em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+        <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos
+            educacionais
+            em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou
+            surdez.
         </p>
         <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
-          aprendizado da língua.</p>
-        <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
-            e saiba mais</a></p>
-      </div>
-    
- <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+            aprendizado da língua.</p>
+        <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md"
+                style="color: blue;">Clique
+                e saiba mais</a></p>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <script>
         const questionVideoElement = document.getElementById('question-video');
         const videoSourceElement = document.getElementById('video-source');
@@ -195,18 +198,18 @@ video {
         let score = 0;
 
         const questions = [
-        { video: "video/agua.mp4", options: ["Água", "Pão", "Arroz", "Maçã"], answer: "Água" },
-    { video: "video/pao.mp4", options: ["Pão", "Arroz", "Maçã", "Banana"], answer: "Pão" },
-    { video: "video/arroz.mp4", options: ["Arroz", "Maçã", "Banana", "Tomate"], answer: "Arroz" },
-    { video: "video/maca.mp4", options: ["Maçã", "Banana", "Tomate", "Carne"], answer: "Maçã" },
-    { video: "video/banana.mp4", options: ["Banana", "Tomate", "Carne", "Peixe"], answer: "Banana" },
-    { video: "video/tomate.mp4", options: ["Tomate", "Carne", "Peixe", "Café"], answer: "Tomate" },
-    { video: "video/carne.mp4", options: ["Carne", "Peixe", "Café", "Chá"], answer: "Carne" },
-    { video: "video/peixe.mp4", options: ["Peixe", "Café", "Chá", "Água"], answer: "Peixe" },
-    { video: "video/cafe.mp4", options: ["Café", "Chá", "Água", "Pão"], answer: "Café" },
-    { video: "video/cha.mp4", options: ["Chá", "Água", "Pão", "Arroz"], answer: "Chá" }
+            { video: "../flashcards/videos/agua.mp4", options: ["ÁGUA", "PÃO", "ARROZ", "MAÇÃ"], answer: "ÁGUA" },
+            { video: "../flashcards/videos/pao.mp4", options: ["PÃO", "ARROZ", "MAÇÃ", "BANANA"], answer: "PÃO" },
+            { video: "../flashcards/videos/arroz.mp4", options: ["ARROZ", "MAÇÃ", "BANANA", "TOMATE"], answer: "ARROZ" },
+            { video: "../flashcards/videos/maca.mp4", options: ["MAÇÃ", "BANANA", "TOMATE", "CARNE"], answer: "MAÇÃ" },
+            { video: "../flashcards/videos/banana.mp4", options: ["BANANA", "TOMATE", "CARNE", "PEIXE"], answer: "BANANA" },
+            { video: "../flashcards/videos/tomate.mp4", options: ["TOMATE", "CARNE", "PEIXE", "CAFÉ"], answer: "TOMATE" },
+            { video: "../flashcards/videos/carne.mp4", options: ["CARNE", "PEIXE", "CAFÉ", "CHÁ"], answer: "CARNE" },
+            { video: "../flashcards/videos/peixe.mp4", options: ["PEIXE", "CAFÉ", "CHÁ", "ÁGUA"], answer: "PEIXE" },
+            { video: "../flashcards/videos/cafe.mp4", options: ["CAFÉ", "CHÁ", "ÁGUA", "PÃO"], answer: "CAFÉ" },
+            { video: "../flashcards/videos/cha.mp4", options: ["CHÁ", "ÁGUA", "PÃO", "ARROZ"], answer: "CHÁ" }
         ];
- 
+
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -259,18 +262,18 @@ video {
         }
 
         function updateScore() {
-            scoreElement.textContent = `Pontuação: ${score}`;
+            scoreElement.textContent = `PONTOS: ${score}`;
         }
 
         function endGame() {
-            // Salvar a pontuação no localStorage para ser acessada na página final
+            // Salvar a PONTOS no localStorage para ser acessada na página final
             localStorage.setItem('finalScore', score);
             localStorage.setItem('totalQuestions', questions.length);
             // Redirecionar para a página de fim de jogo
             window.location.href = 'end.html';
         }
 
-        optionsContainer.addEventListener('click', function(event) {
+        optionsContainer.addEventListener('click', function (event) {
             if (event.target.classList.contains('option')) {
                 const selectedOption = event.target;
                 const selectedAnswer = selectedOption.textContent;
@@ -279,25 +282,25 @@ video {
         });
 
         displayQuestion();
-    
-    
-        
-    function toggleCardInfo() {
-      var card = document.getElementById('card-info');
-      if (card.style.display === 'none' || card.style.display === '') {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    }
 
-    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
-    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
-    function Acessar(url) {
-      window.location.href = url;
-    }
-  </script>
+
+        function toggleCardInfo() {
+            var card = document.getElementById('card-info');
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+
+        document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+        document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+        function Acessar(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
-</html>
 
+</html>

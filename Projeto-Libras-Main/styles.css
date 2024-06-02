@@ -1,7 +1,6 @@
-
 /*Padrões*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poetsen One', serif;
   margin: 0;
   padding: 0;
   background-image: url('./imagens/svg_fundo1.jpg');
@@ -11,6 +10,10 @@ body {
 
 h1 {
   text-align: center;
+}
+
+.p {
+  text-align: justify;
 }
 
 
@@ -60,17 +63,20 @@ h2 {
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  font-size: 20px;
+  background-color: #eeeeee;
   text-align: center;
   align-items: center;
   justify-content: center;
+  width: 270px;
+  height: 350px;
 }
 
 .videocard {
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #eeeeee;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -130,7 +136,9 @@ h2 {
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
+
 
 .card-ajuda p {
   margin: 0 0 10px;
@@ -145,11 +153,13 @@ h2 {
 }
 
 .card:hover {
-  background-color: #e0e0e0;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(243, 255, 178, 0.938);
 }
 
 .videocard:hover {
-  background-color: #e0e0e0;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(243, 255, 178, 0.938);
 }
 
 @media screen and (max-width: 600px) {
@@ -157,6 +167,7 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+
   .card {
     width: calc(100% - 40px);
   }
@@ -172,6 +183,7 @@ h2 {
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
 

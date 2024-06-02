@@ -6,53 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Aulas</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body>
+<style>
+  .videocard {
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+  }
+</style>
+
+<body style = "background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoCategorias.jpg') ">
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('../pagina.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Escolha o que irá assistir!</h1>
+  <h1>ESCOLHA O QUE IRÁ ASSISTIR!</h1>
 
   <div class="cards">
     <div class="videocard" onclick="Acessar('adjetivosV.html')">
-      <h2>Adjetivos</h2>
+      <h2>ADJETIVOS</h2>
     </div>
     <div class="videocard" onclick="Acessar('alimentosV.html')">
-      <h2>Alimentos</h2>
+      <h2>ALIMENTOS</h2>
     </div>
     <div class="videocard" onclick="Acessar('animaisV.html')">
-      <h2>Animais</h2>
-    </div>
-    <div class="videocard">
-      <h2>Em desenvolvimento...</h2>
+      <h2>ANIMAIS</h2>
     </div>
     <div class="videocard" onclick="Acessar('coresV.html')">
-      <h2>Cores</h2>
+      <h2>CORES</h2>
+    </div>
+    <div class="videocard" onclick="Acessar('diasEstacoesV.html')">
+      <h2>DIAS E ESTAÇÕES</h2>
     </div>
     <div class="videocard" onclick="Acessar('familiaV.html')">
-      <h2>Família</h2>
+      <h2>FAMÍLIA</h2>
     </div>
     <div class="videocard" onclick="Acessar('lugaresV.html')">
-      <h2>Lugares</h2>
+      <h2>LUGARES</h2>
     </div>
     <div class="videocard" onclick="Acessar('numerosV.html')">
-      <h2>Números</h2>
+      <h2>NÚMEROS</h2>
     </div>
     <div class="videocard" onclick="Acessar('roupasV.html')">
-      <h2>Roupas</h2>
+      <h2>ROUPAS</h2>
     </div>
     <div class="videocard" onclick="Acessar('saudacoesV.html')">
-      <h2>Saudações</h2>
+      <h2>SAUDAÇÕES</h2>
     </div>
   </div>
 
@@ -62,7 +71,8 @@
     </p>
     <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
       aprendizado da língua.</p>
-    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique e saiba mais</a></p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
   </div>
 
   <script>
@@ -79,7 +89,7 @@
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
     function Acessar(url) {
-        window.location.href = url;
+      window.location.href = url;
     }
   </script>
 </body>

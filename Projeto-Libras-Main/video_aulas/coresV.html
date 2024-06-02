@@ -6,34 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cores</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body>
+<body style="background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoCores.jpg') ">
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('video_aulas.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="info-text">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
+
 
   <style>
     iframe {
       display: flex;
       margin: auto;
-      padding: 100px
+      padding: 100px;
+      width: 50%;
     }
-    
+
+    .topo {
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      color: rgb(255, 255, 255);
+    }
   </style>
 
-  <h1>Cores</h1>
 
   <div>
-      <iframe width="854" height="480" src="https://www.youtube.com/embed/gqoho8k2bwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/gqoho8k2bwg" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
 
   <div class="card-info" id="card-info">
@@ -42,7 +50,8 @@
     </p>
     <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
       aprendizado da língua.</p>
-    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique e saiba mais</a></p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
   </div>
 
   <script>
@@ -59,7 +68,7 @@
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
     function Acessar(url) {
-        window.location.href = url;
+      window.location.href = url;
     }
   </script>
 </body>

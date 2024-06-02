@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cores</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<style>
+  .topo {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    color: rgb(255, 255, 255);
+  }
+</style>
+
+<body style="background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoCores.jpg') ">
+
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px"
+        onclick="Acessar('./flashcards.html')">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="ajuda-text">Como jogar</span>
+      <span id="ajuda-text" style="margin-left: 10px; font-size: 20px">COMO JOGAR</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Cores</h1>
   <div class="cards">
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Vermelho</h2>
-          <p>Clique para ver informações sobre a cor vermelha.</p>
+          <h2>VERMELHO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/vermelho.mp4" frameborder="0" allowfullscreen></iframe>
@@ -37,8 +47,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Azul</h2>
-          <p>Clique para ver informações sobre a cor azul.</p>
+          <h2>AZUL</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/azul.mp4" frameborder="0" allowfullscreen></iframe>
@@ -48,8 +58,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Verde</h2>
-          <p>Clique para ver informações sobre a cor verde.</p>
+          <h2>VERDE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/verde.mp4" frameborder="0" allowfullscreen></iframe>
@@ -59,8 +69,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Amarelo</h2>
-          <p>Clique para ver informações sobre a cor amarela.</p>
+          <h2>AMARELO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/amarelo.mp4" frameborder="0" allowfullscreen></iframe>
@@ -70,8 +80,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Laranja</h2>
-          <p>Clique para ver informações sobre a cor laranja.</p>
+          <h2>LARANJA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/laranja.mp4" frameborder="0" allowfullscreen></iframe>
@@ -81,8 +91,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Roxo</h2>
-          <p>Clique para ver informações sobre a cor roxa.</p>
+          <h2>ROXO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/roxo.mp4" frameborder="0" allowfullscreen></iframe>
@@ -92,8 +102,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Branco</h2>
-          <p>Clique para ver informações sobre a cor branca.</p>
+          <h2>BRANCO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/branco.mp4" frameborder="0" allowfullscreen></iframe>
@@ -103,8 +113,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Preto</h2>
-          <p>Clique para ver informações sobre a cor preta.</p>
+          <h2>PRETO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/preto.mp4" frameborder="0" allowfullscreen></iframe>
@@ -114,8 +124,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Marrom</h2>
-          <p>Clique para ver informações sobre a cor marrom.</p>
+          <h2>MARROM</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/marrom.mp4" frameborder="0" allowfullscreen></iframe>
@@ -125,8 +135,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Cinza</h2>
-          <p>Clique para ver informações sobre a cor cinza.</p>
+          <h2>CINZA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/cinza.mp4" frameborder="0" allowfullscreen></iframe>
@@ -154,7 +164,7 @@
     <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
         e saiba mais</a></p>
   </div>
- <div vw class="enabled">
+  <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
@@ -165,7 +175,7 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
   <script>
-      function toggleCardAjuda() {
+    function toggleCardAjuda() {
       var card = document.getElementById('card-ajuda');
       if (card.style.display === 'none' || card.style.display === '') {
         card.style.display = 'block';
@@ -191,12 +201,13 @@
     document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
-      function Acessar(url) {
-        window.location.href = url;
-      }
+    function Acessar(url) {
+      window.location.href = url;
+    }
     function flipCard(card) {
       card.classList.toggle('flipped');
     }
   </script>
 </body>
+
 </html>

@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animais</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<style>
+  .topo {
+    background-color: rgb(18, 180, 209);
+    color: rgb(255, 255, 255);
+  }
+</style>
+
+<body style="background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoAnimais.jpg') ">
+
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px"
+        onclick="Acessar('./flashcards.html')">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="ajuda-text">Como jogar</span>
+      <span id="ajuda-text" style="margin-left: 10px; font-size: 20px">COMO JOGAR</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Animais</h1>
   <div class="cards">
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Cachorro</h2>
-          <p>Clique para ver informações sobre o cachorro.</p>
+          <h2>CACHORRO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/cachorro.mp4" frameborder="0" allowfullscreen></iframe>
@@ -37,8 +47,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Gato</h2>
-          <p>Clique para ver informações sobre o gato.</p>
+          <h2>GATO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/gato.mp4" frameborder="0" allowfullscreen></iframe>
@@ -48,8 +58,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Pássaro</h2>
-          <p>Clique para ver informações sobre o pássaro.</p>
+          <h2>PÁSSARO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/passaro.mp4" frameborder="0" allowfullscreen></iframe>
@@ -59,8 +69,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Peixe</h2>
-          <p>Clique para ver informações sobre o peixe.</p>
+          <h2>PEIXE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/peixe.mp4" frameborder="0" allowfullscreen></iframe>
@@ -70,8 +80,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Leão</h2>
-          <p>Clique para ver informações sobre o leão.</p>
+          <h2>LEÃO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/leao.mp4" frameborder="0" allowfullscreen></iframe>
@@ -81,8 +91,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Elefante</h2>
-          <p>Clique para ver informações sobre o elefante.</p>
+          <h2>ELEFANTE</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/elefante.mp4" frameborder="0" allowfullscreen></iframe>
@@ -92,8 +102,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Girafa</h2>
-          <p>Clique para ver informações sobre a girafa.</p>
+          <h2>GIRAFA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/girafa.mp4" frameborder="0" allowfullscreen></iframe>
@@ -103,8 +113,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Macaco</h2>
-          <p>Clique para ver informações sobre o macaco.</p>
+          <h2>MACACO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/macaco.mp4" frameborder="0" allowfullscreen></iframe>
@@ -114,8 +124,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Cobra</h2>
-          <p>Clique para ver informações sobre a cobra.</p>
+          <h2>COBRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/cobra.mp4" frameborder="0" allowfullscreen></iframe>
@@ -125,8 +135,8 @@
     <div class="card" onclick="flipCard(this)">
       <div class="card-inner">
         <div class="front">
-          <h2>Cavalo</h2>
-          <p>Clique para ver informações sobre o cavalo.</p>
+          <h2>CAVALO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
         </div>
         <div class="back">
           <iframe width="209" height="300" src="./videos/cavalo.mp4" frameborder="0" allowfullscreen></iframe>
@@ -155,7 +165,7 @@
         e saiba mais</a></p>
   </div>
 
-   <div vw class="enabled">
+  <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
@@ -167,7 +177,7 @@
   </script>
 
   <script>
-      function toggleCardAjuda() {
+    function toggleCardAjuda() {
       var card = document.getElementById('card-ajuda');
       if (card.style.display === 'none' || card.style.display === '') {
         card.style.display = 'block';
@@ -193,12 +203,13 @@
     document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
     document.getElementById('info-text').addEventListener('click', toggleCardInfo);
 
-      function Acessar(url) {
-        window.location.href = url;
-      }
+    function Acessar(url) {
+      window.location.href = url;
+    }
     function flipCard(card) {
       card.classList.toggle('flipped');
     }
   </script>
 </body>
+
 </html>

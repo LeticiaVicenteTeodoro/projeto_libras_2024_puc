@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -19,11 +20,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 100px;
   }
 
-  h1 {
-    margin-top: 125px;
+  .h2 {
+    font-size: 150px;
   }
 </style>
 
@@ -31,34 +32,30 @@
   <div class="topo">
     <div class="left">
       <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./index.html')"></i>
-      <span id="voltar-text" style="margin-left: 10px;">Voltar</span>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px">VOLTAR</span>
     </div>
     <div class="right">
-      <span id="ajuda-text">O que escolher</span>
+      <span id="ajuda-text" style="font-size: 20px">O QUE ESCOLHER</span>
       <i class="fas fa-question-circle" id="ajuda-icon"></i>
-      <span id="info-text" style="margin-left: 10px;">Sobre</span>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
       <i class="fas fa-info-circle" id="info-icon"></i>
     </div>
   </div>
 
-  <h1>Escolha por onde começar!</h1>
+  <h1>ESCOLHA POR ONDE COMEÇAR!</h1>
+  
   <div class="cardsPagina">
     <div class="card" onclick="Acessar('./video_aulas/video_aulas.html')">
-      <h2>Vídeo Aulas</h2>
-      <p>Clique aqui para aprender.</p>
+      <h2>VÍDEO AULAS</h2>
     </div>
     <div class="card" onclick="Acessar('./flashcards/flashcards.html')">
-      <h2>Flashcards</h2>
-      <p>Clique aqui para testar o conteúdo estudado.</p>
+      <h2>FLASHCARDS</h2>
     </div>
-    
-          <div class="card" onclick="Acessar('./quiz/escolha_quiz.html')">
-      <h2>Quiz</h2>
-      <p>Clique aqui para testar o conteúdo estudado.</p>
+    <div class="card" onclick="Acessar('./quiz/escolha_quiz.html')">
+      <h2>QUIZ</h2>
     </div>
     <div class="card" onclick="Acessar('./jogomemoria/jogo.html')">
-      <h2>Jogo da Memória</h2>
-      <p>Clique aqui pra se divertir.</p>
+      <h2>JOGO DA MEMÓRIA</h2>
     </div>
   </div>
 
@@ -79,7 +76,7 @@
         e saiba mais</a></p>
   </div>
 
-   <div vw class="enabled">
+  <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
