@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dias e Estações</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<style>
+  .topo {
+  background-color: rgb(84, 211, 34);
+  color: rgb(255, 255, 255);
+}
+</style>
+<body style = "background-image: url('../imagens/imagensPlanodeFundo/planoDeFundoDias.jpg') ">
+ 
+  <div class="topo">
+    <div class="left">
+      <i class="fas fa-arrow-left" id="voltar" onclick="Acessar('./flashcards.html')"></i>
+      <span id="voltar-text" style="margin-left: 10px; font-size: 20px" onclick="Acessar('./flashcards.html')">VOLTAR</span>
+    </div>
+    <div class="right">
+      <span id="ajuda-text" style="margin-left: 10px; font-size: 20px">COMO JOGAR</span>
+      <i class="fas fa-question-circle" id="ajuda-icon"></i>
+      <span id="info-text" style="margin-left: 10px; font-size: 20px">SOBRE</span>
+      <i class="fas fa-info-circle" id="info-icon"></i>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>SEGUNDA-FEIRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/segunda.mp4" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>TERÇA-FEIRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/terca.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>QUARTA-FEIRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/quarta.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>QUINTA-FEIRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/quinta.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>SEXTA-FEIRA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/sexta.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>SÁBADO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/sabado.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>DOMINGO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/domingo.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>PRIMAVERA</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/primavera.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>VERÃO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/verao.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+        <div class="front">
+          <h2>INVERNO</h2>
+          <p>CLIQUE PARA VER SE ACERTOU.</p>
+        </div>
+        <div class="back">
+          <iframe width="209" height="300" src="./videos/inverno.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-ajuda" id="card-ajuda">
+    <p>É super fácil aprender a jogar! Siga as instruções:</p>
+    <ol>
+      <li>Faça a linguagem de sinais correspondente a cada nome conforme foi aprendido nas aulas anteriores.</li>
+      <li>Após fazer, clique no card para ver o vídeo e conferir se acertou.</li>
+    </ol>
+    <p>O objetivo do jogo é treinar seus conhecimentos!</p>
+    <p>Chame seus amigos e divirta-se!</p>
+  </div>
+
+  <div class="card-info" id="card-info">
+    <p>Um trabalho feito por alunos da PUC Minas - Poços de Caldas, visando o desenvolvimento de projetos educacionais
+      em Libras (Língua Brasileira de Sinais), destinados ao ensino para crianças com deficiência auditiva ou surdez.
+    </p>
+    <p>O projeto é composto por vídeos e imagens, oferecendo uma abordagem visual e interativa para facilitar o
+      aprendizado da língua.</p>
+    <p><a href="https://github.com/LeticiaVicenteTeodoro/Projeto-Libras/blob/main/README.md" style="color: blue;">Clique
+        e saiba mais</a></p>
+  </div>
+
+
+   <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+
+      function toggleCardAjuda() {
+      var card = document.getElementById('card-ajuda');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('ajuda-icon').addEventListener('click', toggleCardAjuda);
+    document.getElementById('ajuda-text').addEventListener('click', toggleCardAjuda);
+
+
+
+    function toggleCardInfo() {
+      var card = document.getElementById('card-info');
+      if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    document.getElementById('info-icon').addEventListener('click', toggleCardInfo);
+    document.getElementById('info-text').addEventListener('click', toggleCardInfo);
+
+      function Acessar(url) {
+        window.location.href = url;
+      }
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+
+</html>
